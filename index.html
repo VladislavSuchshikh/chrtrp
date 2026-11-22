@@ -686,7 +686,7 @@
         ctx.restore();
         if (!reduceMotion) raf = requestAnimationFrame(draw);
       };
-      hero.addEventListener('pointermove', (event) => { const rect = hero.getBoundingClientRect(); mouse.x = event.clientX - rect.left; mouse.y = event.clientY - rect.top; });
+      hero.addEventListener('mousemove', (event) => { const rect = hero.getBoundingClientRect(); mouse.x = event.clientX - rect.left; mouse.y = event.clientY - rect.top; });
       hero.addEventListener('pointerleave', () => { mouse.x = -1000; mouse.y = -1000; });
       window.addEventListener('resize', resize);
       resize();
